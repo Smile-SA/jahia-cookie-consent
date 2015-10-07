@@ -1,8 +1,9 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
 
-[jnt:acceptCookieBar] > jnt:content, jmix:droppableContent, jmix:siteComponent
+[jnt:acceptCookiesMessage] > jnt:content, jmix:siteComponent
  - acceptCookieButton (string) i18n
  - message (string) i18n
- - knowMoreLink (weakreference,picker[type='page'])
  - knowMoreLinkText (string) i18n
+ - knowMoreLink (weakreference, picker[type='page'])
+ 
