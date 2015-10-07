@@ -1,12 +1,11 @@
-<%@include file="../../common/declarations.jspf"%>
+<%@ include file="../../common/declarations.jspf" %>
 
-<%@include file="acceptCookieBar.hidden.nodeData.jsp"%>
+<template:include view="hidden.setNodeProperties" />
 
-<c:set var="isCookieAccepted" value="${cookie['accept_cookie'].value}" />
+<c:set var="isCookiesAccepted" value="${cookie['_accept_cookie'].value}" />
 
-<c:if test="${not isCookieAccepted or isEditMode}">
-
-    <div id="accept_cookie" class="alert alert-warning alert-dismissible fade" role="alert">
+<c:if test="${not isCookiesAccepted or isEditMode}">
+    <div id="cookieMessage" class="alert alert-warning alert-dismissible fade" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">
             ${acceptCookieButton}
@@ -16,15 +15,13 @@
 
         <c:if test="${not empty knowMoreLink}">
              <span>
-                <a href="${knowMoreLink.url}">
+                <a href="${knowMoreLink.url}" title="">
                     ${knowMoreLinkText}
                 </a>
             </span>
         </c:if>
-
     </div>
 
-    <template:addResources type="css" resources="${url.currentModule}/css/jnt_acceptCookieBar.css" />
-    <template:addResources type="javascript" resources="${url.currentModule}/javascript/jnt_acceptCookieBar.js" />
+    <template:addResources type="css" resources="app.cookies.css" />
+    <template:addResources type="javascript" resources="app.cookies.js" />
 </c:if>
-
