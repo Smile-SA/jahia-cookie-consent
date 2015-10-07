@@ -1,0 +1,57 @@
+#accept_cookie {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0 0 10px 0 #FFFFFF;
+    background: #000000;
+    z-index: 9999;
+    font-size: 14px;
+    line-height: 1em;
+    left: 0px;
+    text-align: center;
+    color: #FFF;
+    opacity: 0.7;
+    height: 45px;
+}
+
+#accept_cookie .close {
+    cursor: pointer;
+    -moz-box-shadow: inset 0 1px 0 0 #fff;
+    -webkit-box-shadow: inset 0 1px 0 0 #fff;
+    box-shadow: inset 0 1px 0 0 #fff;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#f9f9f9),color-stop(1,#e9e9e9));
+    background: -moz-linear-gradient(center top,#f9f9f9 5%,#e9e9e9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#e9e9e9');
+    background-color: #f9f9f9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-indent: 0;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    color: #666!important;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    height: 25px;
+    line-height: 25px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 10px;
+    text-shadow: 1px 1px 0 #fff;
+    opacity: 1;
+    top: -5px;
+}
+
+#accept_cookie span a {
+    color: #428bca;
+}
+
+
+@media (max-width: 767px) {
+    #accept_cookie {
+        height:auto;
+        text-align: justify;
+    }
+}
