@@ -23,6 +23,4 @@
 <%--@elvariable id="acl" type="java.lang.String"--%>
 
 <%-- determine the current mode --%>
-<c:set var="isStudioMode" value="${renderContext.editModeConfigName eq 'studiomode'}"/>
 <c:set var="isEditMode" value="${renderContext.editMode}"/>
-<c:set var="isPreviewMode" value="${renderContext.previewMode}"/>

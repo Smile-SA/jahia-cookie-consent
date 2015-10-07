@@ -3,6 +3,6 @@
 
 [jnt:acceptCookiesMessage] > jnt:content, jmix:siteComponent
  - message (string) i18n
- - buttonText (string) i18n
  - knowMoreLinkText (string) i18n
  - knowMoreLink (weakreference, picker[type='page'])
+ - buttonText (string) i18n
