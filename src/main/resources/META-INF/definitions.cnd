@@ -2,8 +2,7 @@
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
 
 [jnt:acceptCookiesMessage] > jnt:content, jmix:siteComponent
- - acceptCookieButton (string) i18n
+ - acceptCookiesButton (string) i18n
  - message (string) i18n
  - knowMoreLinkText (string) i18n
  - knowMoreLink (weakreference, picker[type='page'])
- 
