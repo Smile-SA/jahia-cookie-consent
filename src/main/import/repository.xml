@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <jahia-utils j:dependencies="default"
+        <cookies-choice j:dependencies="default"
                    j:modulePriority="0"
                    j:moduleType="module"
                    j:title="Jahia Utils"
@@ -15,6 +15,6 @@
                     <contents jcr:primaryType="jnt:contentFolder"/>
                 </templates>
                 
-            </jahia-utils>
+            </cookies-choice>
     </modules>
 </content>
