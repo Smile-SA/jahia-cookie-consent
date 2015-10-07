@@ -1,6 +1,6 @@
 # Cookies choice
 
-Digital Factory module in order to deal with the EU Cookie Law.
+Digital Factory module to deal with the EU Cookie Law.
 
 Lightweight module for alerting users about the use of cookies on your website.
 
