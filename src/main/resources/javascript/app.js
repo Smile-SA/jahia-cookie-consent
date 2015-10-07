@@ -40,7 +40,7 @@ var app = (function (app, undefined) {
    * Set cookie which allow setting other cookies for current domain for one year
    */
   var setAcceptCookie = function () {
-    setCookieForOneYear("_accept_cookie", "true");
+    setCookieForOneYear("_accept_cookies", "true");
   };
 
   // Expose API
@@ -48,7 +48,7 @@ var app = (function (app, undefined) {
 
   $(function () {
     // Let overriding $elm value
-    var $elm = app.cookies.$elm || $("#cookieMessage .close");
+    var $elm = app.cookies.$elm || $("#cookiesMessage .close");
     // Set cookie for current domain when user dismisses legal information
     $elm.on("click", setAcceptCookie);
   });

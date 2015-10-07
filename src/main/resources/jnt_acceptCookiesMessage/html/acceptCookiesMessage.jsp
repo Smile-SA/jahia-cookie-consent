@@ -1,6 +1,6 @@
 <%@ include file="../../common/declarations.jspf" %>
 
-<c:set var="isCookiesAccepted" value="${cookie['_accept_cookie'].value}"/>
+<c:set var="isCookiesAccepted" value="${cookie['_accept_cookies'].value}"/>
 
 <c:if test="${not isCookiesAccepted or isEditMode}">
 
