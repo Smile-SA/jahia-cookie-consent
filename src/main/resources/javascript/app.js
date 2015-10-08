@@ -12,9 +12,7 @@ var app = (function (app, undefined) {
     if (typeof(jQuery) == 'undefined') {
 
       if (! jQueryScriptOutputted) {
-        //only output the script once..
         jQueryScriptOutputted = true;
-        //output the script (load it from google api)
         document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></scr" + "ipt>");
       }
       setTimeout("initJQuery()", 50);
