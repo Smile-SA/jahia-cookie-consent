@@ -3,8 +3,7 @@
 
 <snt = 'http://www.smile.fr/jahia/nt/1.0'>
 
-[snt:acceptCookiesMessage] > jnt:content, jmix:siteComponent
+[snt:cookieConsentMessage] > jnt:content, jmix:siteComponent
  - message (string) i18n
- - knowMoreLinkText (string) i18n
- - knowMoreLink (weakreference, picker[type='page'])
  - buttonText (string) i18n
+ + * (jmix:link)

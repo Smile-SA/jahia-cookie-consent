@@ -4,7 +4,7 @@
         <cookies-choice j:dependencies="default"
                    j:modulePriority="0"
                    j:moduleType="module"
-                   j:title="Cookies Choice"
+                   j:title="Cookie Consent"
                    jcr:primaryType="jnt:module">
                 
                 <portlets jcr:primaryType="jnt:portletFolder"/>

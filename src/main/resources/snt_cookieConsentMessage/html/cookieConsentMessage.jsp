@@ -2,8 +2,6 @@
 
 <c:set var="isCookiesAccepted" value="${cookie['_accept_cookies'].value}"/>
 
-<c:set var="knowMoreLink" value="${jcr:getChildrenOfType(currentNode,'jmix:link')}" />
-
 <c:if test="${not isCookiesAccepted or isEditMode}">
 
     <template:include view="hidden.setNodeProperties"/>
@@ -19,14 +17,17 @@
             <span aria-hidden="true">${buttonText}</span>
         </button>
 
-        ${message}
+        <c:out value="${message} " />
 
-        <c:if test="${not empty knowMoreLink and not empty knowMoreLinkText}">
-            <c:url var="knowMoreLinkUrl" value="${knowMoreLink.url}"/>
-            <a href="${knowMoreLinkUrl}"
-               title="${knowMoreLinkText}"
-            >${knowMoreLinkText}</a>
+        <c:if test="${not empty knowMoreLink}">
+            <template:module node="${knowMoreLink[0]}" />
         </c:if>
+        <c:if test="${empty knowMoreLink}">
+            <div style="margin-top: 20px;">
+                <template:module path="*" nodeTypes="jnt:externalLink jnt:nodeLink" />
+            </div>
+        </c:if>
+
     </div>
 
     <template:addResources type="css" resources="app.css"/>
