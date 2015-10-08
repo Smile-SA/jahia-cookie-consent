@@ -1,7 +1,9 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
 
-[jnt:acceptCookiesMessage] > jnt:content, jmix:siteComponent
+<snt = 'http://www.smile.fr/jahia/nt/1.0'>
+
+[snt:acceptCookiesMessage] > jnt:content, jmix:siteComponent
  - message (string) i18n
  - knowMoreLinkText (string) i18n
  - knowMoreLink (weakreference, picker[type='page'])

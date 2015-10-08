@@ -2,6 +2,8 @@
 
 <c:set var="isCookiesAccepted" value="${cookie['_accept_cookies'].value}"/>
 
+<c:set var="knowMoreLink" value="${jcr:getChildrenOfType(currentNode,'jmix:link')}" />
+
 <c:if test="${not isCookiesAccepted or isEditMode}">
 
     <template:include view="hidden.setNodeProperties"/>
