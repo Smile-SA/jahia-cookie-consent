@@ -1,4 +1,4 @@
-# Cookies choice
+# Jahia Cookie Consent
 
 Digital Factory module to deal with the EU Cookie Law.
 
