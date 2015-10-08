@@ -1,4 +1,4 @@
-#cookiesMessage {
+#cookieMessage {
     width: 100%;
     position: fixed;
     top: 0;
@@ -14,7 +14,17 @@
     height: 45px;
 }
 
-#cookiesMessage .close {
+#cookieMessage.edit {
+    margin-bottom: 15px;
+    position: static;
+}
+
+#cookieMessage .message, #cookieMessage .knowMoreLink {
+    display: inline-block;
+}
+
+
+#cookieMessage .close {
     cursor: pointer;
     -moz-box-shadow: inset 0 1px 0 0 #fff;
     -webkit-box-shadow: inset 0 1px 0 0 #fff;
@@ -44,12 +54,12 @@
     top: -5px;
 }
 
-#cookiesMessage a {
+#cookieMessage a {
     color: #428bca;
 }
 
 @media (max-width: 767px) {
-    #cookiesMessage {
+    #cookieMessage {
         height: auto;
         text-align: justify;
     }
