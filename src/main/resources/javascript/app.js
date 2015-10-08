@@ -7,7 +7,6 @@ var app = (function (app, undefined) {
 
   var jQueryScriptOutputted = false;
   function initJQuery() {
-
     //if the jQuery object isn't available
     if (typeof(jQuery) == 'undefined') {
 
@@ -16,11 +15,6 @@ var app = (function (app, undefined) {
         document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></scr" + "ipt>");
       }
       setTimeout("initJQuery()", 50);
-    } else {
-
-      $(function() {
-        //do anything that needs to be done on document.ready
-      });
     }
   }
 
