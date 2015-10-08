@@ -10,7 +10,6 @@
 
     <c:set var="message" value="${moduleMap.message}"/>
     <c:set var="knowMoreLink" value="${moduleMap.knowMoreLink}"/>
-    <c:set var="knowMoreLinkText" value="${moduleMap.knowMoreLinkText}"/>
     <c:set var="buttonText" value="${moduleMap.buttonText}"/>
 
     <div id="cookieMessage" class="alert alert-warning alert-dismissible fade ${cssClass}" role="alert">
