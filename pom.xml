@@ -13,7 +13,14 @@
     <name>Cookie Consent</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <description>This is the custom module (Cookie Consent) for running on a Digital Factory server.</description>
+    <description>This is the custom module Cookie Consent for running on a Digital Factory server.</description>
+
+    <scm>
+        <connection>scm:git:ssh://git@github.com:Smile-SA/jahia-cookie-consent</connection>
+        <developerConnection>scm:git:ssh://git@github.com:Smile-SA/jahia-cookie-consent</developerConnection>
+        <url>scm:git:ssh://git@github.com:Smile-SA/jahia-cookie-consent</url>
+        <tag>master</tag>
+    </scm>
 
     <repositories>
         <repository>
