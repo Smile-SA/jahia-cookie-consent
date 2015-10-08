@@ -4,7 +4,7 @@
         <cookies-choice j:dependencies="default"
                    j:modulePriority="0"
                    j:moduleType="module"
-                   j:title="Jahia Utils"
+                   j:title="Cookies Choice"
                    jcr:primaryType="jnt:module">
                 
                 <portlets jcr:primaryType="jnt:portletFolder"/>
