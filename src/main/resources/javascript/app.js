@@ -4,8 +4,34 @@ var app = (function (app, undefined) {
   // Cookies namespace
   app.cookies = app.cookies || {};
 
+
+  var jQueryScriptOutputted = false;
+  function initJQuery() {
+
+    //if the jQuery object isn't available
+    if (typeof(jQuery) == 'undefined') {
+
+      if (! jQueryScriptOutputted) {
+        //only output the script once..
+        jQueryScriptOutputted = true;
+        //output the script (load it from google api)
+        document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></scr" + "ipt>");
+      }
+      setTimeout("initJQuery()", 50);
+    } else {
+
+      $(function() {
+        //do anything that needs to be done on document.ready
+      });
+    }
+  }
+
+
+  initJQuery();
+
   // Deal with possible jQuery conflicts
   var $ = app.$ || $;
+
 
   /**
    * Set cookie for X days
