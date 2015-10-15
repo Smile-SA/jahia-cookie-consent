@@ -30,9 +30,10 @@ var app = (function (app, undefined) {
     /**
      * When click on accept button, set a cookie
      */
-    var initializeConsentCookieButton = function () {
+    app.initializeConsentCookieButton = function () {
         document.querySelector("#cookieMessage .close").onclick = function(){
             setCookieForOneYear("_accept_cookies", "true");
+            document.querySelector("#cookieMessage").style.display = "none";
         };
     };
 
