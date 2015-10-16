@@ -1,9 +1,6 @@
 var app = (function (app, undefined) {
     "use strict";
 
-    // Cookies namespace
-    app.cookies = app.cookies || {};
-
     var setCookieForXDays = function (expiresInDays) {
 
         /**
