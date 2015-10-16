@@ -42,8 +42,8 @@
     <template:addResources type="javascript" resources="app.js"/>
 
     <script>
-        (function() {
-            initializeConsentCookieButton();
-        })();
+
+            app.initializeConsentCookieButton();
+
     </script>
 </c:if>
