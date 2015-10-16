@@ -14,8 +14,8 @@
   <name>Cookie Consent</name>
   <description>This is the custom module Cookie Consent for running on a Digital Factory server.</description>
   <scm>
-    <connection>scm:git:git@github.com:Smile-SA/jahia-cookie-consent</connection>
-    <developerConnection>scm:git:git@github.com:Smile-SA/jahia-cookie-consent</developerConnection>
+    <connection>scm:git:git@github.com:Smile-SA/jahia-cookie-consent.git</connection>
+    <developerConnection>scm:git:git@github.com:Smile-SA/jahia-cookie-consent.git</developerConnection>
     <tag>master</tag>
     <url>scm:git:git@github.com:Smile-SA/jahia-cookie-consent</url>
   </scm>
