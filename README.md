@@ -4,6 +4,10 @@ Digital Factory module to deal with the EU Cookie Law.
 
 Lightweight module for alerting users about the use of cookies on your website.
 
+## Note
+
+By default, module works with Bootstrap 3 markup.
+
 ## How to
 
 In order to use that module, follow these steps:
