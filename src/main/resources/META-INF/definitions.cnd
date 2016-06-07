@@ -3,6 +3,7 @@
 <snt = 'http://www.smile.fr/jahia/nt/1.0'>
 
 [snt:cookieConsentMessage] > jnt:content, jmix:siteComponent
- - message (string) internationalized
+ - message (string, richtext) internationalized
  - buttonText (string) internationalized
- + * (jmix:link)
+ - dismissButtonText (string) internationalized
+ - display (string, choicelist[resourceBundle]) = 'fixedTop' mandatory < 'fixedTop', 'fixedBottom', 'inline'

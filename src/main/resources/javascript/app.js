@@ -25,13 +25,69 @@ var app = (function (app, undefined) {
     var setCookieForOneYear = setCookieForXDays(365);
 
     /**
-     * When click on accept button, set a cookie
+    * Hide cookie consent, remove body padding and remove event listener
+    */
+    var hide = function () {
+        var cookieConsentList = document.querySelectorAll(".cookieConsent");
+
+        for (var i = 0; i < cookieConsentList.length; i++) {
+            var cookieConsent = cookieConsentList[i];
+            cookieConsent.classList.add("hide");
+            document.body.style.paddingTop = "";
+            document.body.style.paddingBottom = "";
+            window.removeEventListener("resize", addBodyPadding, true)
+        }
+    };
+
+    /**
+     * When click on dismiss button, hide cookie consent.
+     * When click on accept button, set a cookie and hide cookie consent.
      */
+    var initializeButtonClicks = function () {
+        var cookieConsentAcceptList = document.querySelectorAll(".cookieConsent .accept");
+        for (var i = 0; i < cookieConsentAcceptList.length; i++) {
+            var cookieConsentAccept = cookieConsentAcceptList[i];
+            cookieConsentAccept.onclick = function() {
+                setCookieForOneYear("_accept_cookies", "true");
+                hide();
+            };
+        }
+        var cookieConsentDismissList = document.querySelectorAll(".cookieConsent .dismiss");
+        for (var i = 0; i < cookieConsentDismissList.length; i++) {
+            var cookieConsentDismiss = cookieConsentDismissList[i];
+            if (cookieConsentDismiss) {
+                cookieConsentDismiss.onclick = function() {
+                    hide();
+                };
+            }
+        }
+    };
+
+    /**
+    * Add top or bottom padding to the body when using fixed positioning
+    */
+    var addBodyPadding = function () {
+        var cookieConsentFixedTop = document.querySelector(".cookieConsent.fixedTop");
+        if (cookieConsentFixedTop) {
+            document.body.style.paddingTop = cookieConsentFixedTop.offsetHeight + "px";
+        }
+        var cookieConsentFixedBottom = document.querySelector(".cookieConsent.fixedBottom");
+        if (cookieConsentFixedBottom) {
+            document.body.style.paddingBottom = cookieConsentFixedBottom.offsetHeight + "px";
+        }
+    };
+
+    /**
+    * Initializes body padding (with window resize handling)
+    */
+    var initializeBodyPadding = function () {
+        addBodyPadding();
+        window.addEventListener("resize", addBodyPadding, true);
+    };
+
     app.initializeConsentCookieButton = function () {
-        document.querySelector("#cookieMessage .close").onclick = function(){
-            setCookieForOneYear("_accept_cookies", "true");
-            document.querySelector("#cookieMessage").style.display = "none";
-        };
+        initializeButtonClicks();
+        initializeBodyPadding();
     };
 
     return app;

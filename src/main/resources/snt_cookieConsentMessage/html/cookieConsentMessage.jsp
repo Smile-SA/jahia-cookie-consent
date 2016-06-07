@@ -2,40 +2,34 @@
 
 <c:set var="isCookiesAccepted" value="${cookie['_accept_cookies'].value}"/>
 
-<c:set var="cssClass" value="${isEditMode ? 'edit':''}" />
+<c:set var="cssEditMode" value="${isEditMode ? 'edit':''}" />
 
 <c:if test="${not isCookiesAccepted or isEditMode}">
 
     <template:include view="hidden.setNodeProperties"/>
 
     <c:set var="message" value="${moduleMap.message}"/>
-    <c:set var="knowMoreLink" value="${moduleMap.knowMoreLink}"/>
     <c:set var="buttonText" value="${moduleMap.buttonText}"/>
+    <c:set var="dismissButtonText" value="${moduleMap.dismissButtonText}"/>
+    <c:set var="cssDisplay" value="${moduleMap.display}" />
 
-    <div id="cookieMessage" class="alert alert-warning alert-dismissible fade ${cssClass}" role="alert">
-        <fmt:message key="label.dismiss" var="lDismiss"/>
-        <button type="button" class="close" data-dismiss="alert" aria-label="${lDismiss}">
-            <span aria-hidden="true">${buttonText}</span>
-        </button>
-
+    <div class="cookieConsent alert alert-warning fade ${cssEditMode} ${cssDisplay}" role="alert">
         <div class="message">
-            <c:out value="${message} " />
+            <c:out value="${message}" escapeXml="false" />
         </div>
 
-        <c:if test="${not empty knowMoreLink}">
-            <div class="knowMoreLink">
-                <template:module node="${knowMoreLink[0]}" />
-            </div>
-        </c:if>
-
-        <c:if test="${empty knowMoreLink}">
-            <div class="knowMoreLink">
-                <div style="margin-top: 20px;">
-                    <template:module path="*" nodeTypes="jnt:externalLink jnt:nodeLink" />
-                </div>
-            </div>
-        </c:if>
-
+        <div class="cookieConsent__buttons">
+            <fmt:message key="label.accept" var="lAccept"/>
+            <button type="button" class="accept" data-accept="alert" aria-label="${lAccept}">
+                <span aria-hidden="true">${buttonText}</span>
+            </button>
+            <c:if test="${not empty dismissButtonText}">
+                <fmt:message key="label.dismiss" var="lDismiss"/>
+                <button type="button" class="dismiss" data-dismiss="alert" aria-label="${lDismiss}">
+                    <span aria-hidden="true">${dismissButtonText}</span>
+                </button>
+            </c:if>
+        </div>
     </div>
 
     <template:addResources type="css" resources="app.css"/>
@@ -43,7 +37,7 @@
 
     <script>
         +function (app) {
-            app.initializeConsentCookieButton();    
+            app.initializeConsentCookieButton();
         }(app);
     </script>
 </c:if>
