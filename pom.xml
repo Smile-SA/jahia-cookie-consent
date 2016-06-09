@@ -26,6 +26,7 @@
   </distributionManagement>
   <properties>
     <jahia-private-app-store>http://store.jahia.com/cms/render/live/en/sites/private-app-store</jahia-private-app-store>
+    <release.plugin.version>2.5.1-jahia1</release.plugin.version>
   </properties>
   <repositories>
     <repository>
