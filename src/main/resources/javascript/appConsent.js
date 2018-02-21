@@ -1,4 +1,4 @@
-var app = (function (app, undefined) {
+var appConsent = (function (appConsent, undefined) {
     "use strict";
 
     var setCookieForXDays = function (expiresInDays) {
@@ -85,10 +85,10 @@ var app = (function (app, undefined) {
         window.addEventListener("resize", addBodyPadding, true);
     };
 
-    app.initializeConsentCookieButton = function () {
+    appConsent.initializeConsentCookieButton = function () {
         initializeButtonClicks();
         initializeBodyPadding();
     };
 
-    return app;
-}(app || {}));
+    return appConsent;
+}(appConsent || {}));

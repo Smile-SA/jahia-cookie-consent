@@ -32,12 +32,12 @@
         </div>
     </div>
 
-    <template:addResources type="css" resources="app.css"/>
-    <template:addResources type="javascript" resources="app.js"/>
+    <template:addResources type="css" resources="appConsent.css"/>
+    <template:addResources type="javascript" resources="appConsent.js"/>
 
     <script>
-        +function (app) {
-            app.initializeConsentCookieButton();
-        }(app);
+        +function (appConsent) {
+            appConsent.initializeConsentCookieButton();
+        }(appConsent);
     </script>
 </c:if>
