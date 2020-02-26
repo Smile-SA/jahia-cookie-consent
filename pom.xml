@@ -8,14 +8,14 @@
   </parent>
   <groupId>org.jahia.modules</groupId>
   <artifactId>cookie-consent</artifactId>
-  <version>1.3</version>
+  <version>1.4-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Cookie Consent</name>
   <description>This is the custom module Cookie Consent for running on a Digital Factory server.</description>
   <scm>
     <connection>scm:git:git@github.com:Smile-SA/jahia-cookie-consent.git</connection>
     <developerConnection>scm:git:git@github.com:Smile-SA/jahia-cookie-consent.git</developerConnection>
-    <tag>cookie-consent-1.3</tag>
+    <tag>master</tag>
     <url>scm:git:git@github.com:Smile-SA/jahia-cookie-consent</url>
   </scm>
   <distributionManagement>
